@@ -167,7 +167,7 @@ export default function Home() {
                   width={product.imageWidth}
                   height={product.imageHeight}
                   loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center"
                 />
                 <span className="absolute top-3 left-3 rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground">
                   {product.tag}
@@ -241,14 +241,14 @@ export default function Home() {
               <ArrowRight className="size-4" />
             </a>
           </div>
-          <div className="relative overflow-hidden rounded-2xl" style={{ paddingBottom: "calc(100% - 20px)" }}>
+          <div className="relative aspect-[26/25] min-w-0 overflow-hidden rounded-2xl">
             <img
               src="/images/rose-trail-set.webp"
               alt="HIKE dusty rose hiking set: trousers, backpack and trail shoes"
               width={1200}
               height={800}
               loading="lazy"
-              className="h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
           </div>
         </div>
