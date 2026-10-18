@@ -141,14 +141,14 @@ export default function Home() {
               key={product.name}
               className="group overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-xl"
             >
-              <div className="relative overflow-hidden bg-secondary">
+              <div className="relative aspect-square overflow-hidden bg-secondary">
                 <img
                   src={product.image}
                   alt={product.name}
                   width={product.imageWidth}
                   height={product.imageHeight}
                   loading="lazy"
-                  className="aspect-square w-full object-contain"
+                  className="h-full w-full object-cover object-center"
                 />
                 <span className="absolute top-3 left-3 rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground">
                   {product.tag}
