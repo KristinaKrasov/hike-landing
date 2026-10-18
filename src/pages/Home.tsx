@@ -159,9 +159,9 @@ export default function Home() {
           {products.map((product) => (
             <article
               key={product.name}
-              className="group overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-xl"
             >
-              <div className="relative aspect-square overflow-hidden bg-secondary">
+              <div className="relative aspect-square shrink-0 overflow-hidden bg-secondary">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -174,12 +174,12 @@ export default function Home() {
                   {product.tag}
                 </span>
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
                   {product.category}
                 </p>
                 <h3 className="mt-1 font-display text-lg font-semibold">{product.name}</h3>
-                <div className="mt-3 flex items-baseline gap-2">
+                <div className="mt-auto flex items-baseline gap-2 pt-3">
                   <span className="text-xl font-bold">{product.price}</span>
                   {product.oldPrice && (
                     <span className="text-sm text-muted-foreground line-through">
