@@ -5,7 +5,6 @@ import { ArrowRight, Mountain, Truck, ShieldCheck, Percent } from "lucide-react"
 import { Newsletter } from "@/components/newsletter";
 
 import heroImg from "@/assets/hero.jpg";
-import setImg from "@/assets/product-set.jpg";
 
 import { products } from "@/data/products";
 
@@ -243,12 +242,12 @@ export default function Home() {
             </a>
           </div>
           <img
-            src={setImg}
-            alt="HIKE outdoor set: fleece, trousers and backpack"
-            width={1024}
-            height={1024}
+            src="/images/rose-trail-set.webp"
+            alt="HIKE dusty rose hiking set: trousers, backpack and trail shoes"
+            width={1200}
+            height={800}
             loading="lazy"
-            className="w-full rounded-2xl object-cover"
+            className="h-auto w-full rounded-2xl"
           />
         </div>
       </section>
