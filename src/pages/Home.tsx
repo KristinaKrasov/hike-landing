@@ -3,36 +3,9 @@ import { ArrowRight, Mountain, Truck, ShieldCheck, Percent } from "lucide-react"
 import { Newsletter } from "@/components/newsletter";
 
 import heroImg from "@/assets/hero.jpg";
-import shoesImg from "@/assets/product-shoes.jpg";
-import jacketImg from "@/assets/product-jacket.jpg";
 import setImg from "@/assets/product-set.jpg";
 
-const products = [
-  {
-    name: "HIKE Trail One Trail Shoes",
-    category: "Footwear",
-    price: "12 990 ₽",
-    oldPrice: "15 990 ₽",
-    tag: "-19%",
-    image: shoesImg,
-  },
-  {
-    name: "HIKE Storm Shell Waterproof Jacket",
-    category: "Clothing",
-    price: "18 490 ₽",
-    oldPrice: null,
-    tag: "New",
-    image: jacketImg,
-  },
-  {
-    name: "Outdoor Set: Fleece, Trousers & 22L Backpack",
-    category: "Sets",
-    price: "21 990 ₽",
-    oldPrice: "26 470 ₽",
-    tag: "Save 4,480 ₽",
-    image: setImg,
-  },
-];
+import { products } from "@/data/products";
 
 const promos = [
   {
@@ -42,7 +15,7 @@ const promos = [
   },
   {
     icon: Truck,
-    title: "Free delivery on orders over 7,000 ₽",
+    title: "Free delivery on orders over $100",
     text: "Nationwide delivery to pickup points or straight to your door.",
   },
   {
@@ -63,11 +36,11 @@ export default function Home() {
               {[
                 "New SS26 collection",
                 "20% off your second pair",
-                "Free delivery on orders over 7,000 ₽",
+                "Free delivery on orders over $100",
                 "30-day exchanges",
                 "New SS26 collection",
                 "20% off your second pair",
-                "Free delivery on orders over 7,000 ₽",
+                "Free delivery on orders over $100",
                 "30-day exchanges",
               ].map((text, i) => (
                 <span key={i} className="flex items-center gap-3">
@@ -172,10 +145,10 @@ export default function Home() {
                 <img
                   src={product.image}
                   alt={product.name}
-                  width={1024}
-                  height={1024}
+                  width={product.imageWidth}
+                  height={product.imageHeight}
                   loading="lazy"
-                  className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="aspect-square w-full object-contain"
                 />
                 <span className="absolute top-3 left-3 rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground">
                   {product.tag}
