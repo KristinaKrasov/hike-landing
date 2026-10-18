@@ -116,40 +116,42 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="relative">
+      <section className="relative bg-graphite">
         <img
           src={heroImg}
           alt="Hiker in HIKE outdoor gear on a mountain ridge at sunrise"
           width={1920}
           height={1088}
-          className="h-[70vh] w-full object-cover"
+          className="block h-auto w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-graphite/80 via-graphite/20 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-6xl px-4 pb-12">
-          <p className="animate-rise-in text-sm font-semibold tracking-widest text-accent uppercase">
-            SS26 collection
-          </p>
-          <h1
-            className="headline-xl mt-3 max-w-3xl animate-rise-in text-5xl text-graphite-foreground sm:text-7xl"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Built for trails. Ready for the city.
-          </h1>
-          <p
-            className="mt-4 max-w-xl animate-rise-in text-base text-graphite-foreground/80 sm:text-lg"
-            style={{ animationDelay: "0.2s" }}
-          >
-            HIKE technical clothing and footwear stand up to rain, rocky trails and thousands of
-            miles — and look good doing it.
-          </p>
-          <div className="mt-6 animate-rise-in" style={{ animationDelay: "0.3s" }}>
-            <a
-              href="#catalog"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-accent-foreground transition-transform hover:scale-105"
+        <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-l from-graphite/80 via-graphite/20 to-transparent md:block" />
+        <div className="relative mx-auto max-w-6xl px-4 py-8 sm:py-10 md:absolute md:inset-0 md:flex md:items-center md:py-6">
+          <div className="md:ml-auto md:w-1/2 md:pl-4">
+            <p className="animate-rise-in text-sm font-semibold tracking-widest text-accent uppercase">
+              SS26 collection
+            </p>
+            <h1
+              className="headline-xl mt-3 max-w-3xl animate-rise-in text-4xl text-graphite-foreground sm:text-5xl md:text-4xl lg:text-6xl xl:text-7xl"
+              style={{ animationDelay: "0.1s" }}
             >
-              Explore the collection
-              <ArrowRight className="size-4" />
-            </a>
+              Built for trails. Ready for the city.
+            </h1>
+            <p
+              className="mt-4 max-w-xl animate-rise-in text-base text-graphite-foreground/80 sm:text-lg"
+              style={{ animationDelay: "0.2s" }}
+            >
+              HIKE technical clothing and footwear stand up to rain, rocky trails and thousands of
+              miles — and look good doing it.
+            </p>
+            <div className="mt-6 animate-rise-in" style={{ animationDelay: "0.3s" }}>
+              <a
+                href="#catalog"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-accent-foreground transition-transform hover:scale-105"
+              >
+                Explore the collection
+                <ArrowRight className="size-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
