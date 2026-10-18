@@ -1,6 +1,5 @@
 import { ArrowLeft, Compass, Leaf, Users } from "lucide-react";
 
-import heroImg from "@/assets/hero.jpg";
 
 const values = [
   {
@@ -51,12 +50,12 @@ export default function About() {
           specialists.
         </p>
         <img
-          src={heroImg}
-          alt="The HIKE team testing outdoor gear in the mountains"
-          width={1920}
-          height={1088}
+          src="/images/hike-store.webp"
+          alt="HIKE outdoor clothing and footwear store with mountain views"
+          width={1312}
+          height={1199}
           loading="lazy"
-          className="mt-10 w-full rounded-3xl object-cover"
+          className="mt-10 h-auto w-full rounded-3xl"
         />
       </section>
 
