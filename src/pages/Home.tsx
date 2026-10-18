@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { Cart } from "@/components/cart";
 import { ArrowRight, Mountain, Truck, ShieldCheck, Percent } from "lucide-react";
 
 import { Newsletter } from "@/components/newsletter";
@@ -26,6 +28,23 @@ const promos = [
 ];
 
 export default function Home() {
+  const [quantities, setQuantities] = useState<Record<string, number>>({});
+  const cartItems = products
+    .filter((product) => (quantities[product.image] ?? 0) > 0)
+    .map((product) => ({ ...product, quantity: quantities[product.image] ?? 0 }));
+
+  function addToCart(image: string) {
+    setQuantities((current) => ({ ...current, [image]: (current[image] ?? 0) + 1 }));
+  }
+
+  function removeFromCart(image: string) {
+    setQuantities((current) => {
+      const next = { ...current };
+      delete next[image];
+      return next;
+    });
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Promo ticker */}
@@ -84,6 +103,7 @@ export default function Home() {
             >
               Contact
             </a>
+            <Cart items={cartItems} onRemove={removeFromCart} />
           </nav>
         </div>
       </header>
@@ -167,7 +187,11 @@ export default function Home() {
                     </span>
                   )}
                 </div>
-                <button className="mt-4 w-full rounded-full bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-graphite/80">
+                <button
+                  type="button"
+                  onClick={() => addToCart(product.image)}
+                  className="mt-4 w-full cursor-pointer rounded-full bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-graphite/80"
+                >
                   Add to basket
                 </button>
               </div>
