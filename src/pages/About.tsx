@@ -1,23 +1,5 @@
-import { ArrowLeft, Compass, Leaf, Users } from "lucide-react";
-
-
-const values = [
-  {
-    icon: Compass,
-    title: "Trail tested",
-    text: "Every design is field tested from Karelia to Altai, in rain, snow and heat.",
-  },
-  {
-    icon: Leaf,
-    title: "Responsible production",
-    text: "We use recycled fabrics and PFAS-free membranes wherever possible.",
-  },
-  {
-    icon: Users,
-    title: "Community",
-    text: "We organise open hikes and gear testing events for everyone.",
-  },
-];
+import { ArrowLeft } from "lucide-react";
+import { Newsletter } from "@/components/newsletter";
 
 export default function About() {
   return (
@@ -59,42 +41,20 @@ export default function About() {
         />
       </section>
 
-      <section className="bg-graphite py-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="headline-lg text-3xl text-graphite-foreground sm:text-4xl">
-            Our principles
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="rounded-2xl border border-graphite-foreground/10 bg-graphite-foreground/5 p-6"
-              >
-                <div className="flex size-11 items-center justify-center rounded-full bg-accent">
-                  <value.icon className="size-5 text-accent-foreground" />
-                </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-graphite-foreground">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-sm text-graphite-foreground/70">{value.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Newsletter />
 
-      <section className="mx-auto max-w-6xl px-4 py-16 text-center">
-        <h2 className="headline-lg text-3xl sm:text-4xl">Ready for the trail?</h2>
-        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          Explore our collection of seasonal favourites and discounted outdoor sets.
-        </p>
-        <a
-          href="/"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:scale-105"
-        >
-          Shop the collection
-        </a>
-      </section>
+      {/* Footer */}
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-muted-foreground sm:flex-row">
+          <span className="headline-lg text-lg text-foreground">
+            HIKE<span className="text-accent">.</span>
+          </span>
+          <p>© 2026 HIKE. Outdoor clothing & footwear.</p>
+          <a href="/contacts" className="font-medium text-foreground hover:underline">
+            Get in touch
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
