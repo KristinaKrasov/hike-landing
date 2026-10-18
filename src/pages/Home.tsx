@@ -243,10 +243,10 @@ export default function Home() {
           </div>
           <div className="relative aspect-[26/25] min-w-0 overflow-hidden rounded-2xl">
             <img
-              src="/images/rose-trail-set.webp"
-              alt="HIKE dusty rose hiking set: trousers, backpack and trail shoes"
+              src="/images/black-trail-set.webp"
+              alt="HIKE black hiking set with lime details: trousers, backpack and trail shoes"
               width={1200}
-              height={800}
+              height={1200}
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
