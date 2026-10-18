@@ -241,14 +241,16 @@ export default function Home() {
               <ArrowRight className="size-4" />
             </a>
           </div>
-          <img
-            src="/images/rose-trail-set.webp"
-            alt="HIKE dusty rose hiking set: trousers, backpack and trail shoes"
-            width={1200}
-            height={800}
-            loading="lazy"
-            className="h-auto w-full rounded-2xl"
-          />
+          <div className="aspect-square overflow-hidden rounded-2xl">
+            <img
+              src="/images/rose-trail-set.webp"
+              alt="HIKE dusty rose hiking set: trousers, backpack and trail shoes"
+              width={1200}
+              height={800}
+              loading="lazy"
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
         </div>
       </section>
 
